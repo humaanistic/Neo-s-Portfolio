@@ -6,16 +6,23 @@
     box-sizing: border-box;
 }
 
+@font-face {
+  font-family: 'MyCustomFont';
+  src: url('OLDSH___.TTF') format('truetype');
+
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; /* Helps with loading performance */
+}
+
 
 /* ===== BODY ===== */
 
 body {
     background-color: #f9e7d9;
     color: #433029;
-
-    font-family: Arial, Helvetica, sans-serif;
-
     line-height: 1.6;
+    font-family: 'MyCustomFont';
 }
 
 
