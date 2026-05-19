@@ -1,0 +1,234 @@
+/* ===== RESET ===== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* ===== BODY ===== */
+
+body {
+    background-color: #f9e7d9;
+    color: #433029;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    line-height: 1.6;
+}
+
+
+/* ===== HEADER ===== */
+
+header {
+    padding: 5rem 2rem 3rem 2rem;
+    background-color:#433029;
+    text-align: center;
+    color:#f9e7d9
+}
+
+header h1 {
+    font-size: 4rem;
+    
+    font-weight: normal;
+}
+
+
+/* ===== INTRO ===== */
+
+.intro {
+    width: 90%;
+    max-width: 900px;
+
+    margin: auto;
+
+    margin-bottom: 4rem;
+}
+
+.intro p {
+    font-size: 1.1rem;
+
+    text-align: center;
+}
+
+
+/* ===== GALLERY ===== */
+
+.gallery {
+    width: 90%;
+    max-width: 1200px;
+
+    margin: auto;
+
+    padding-bottom: 5rem;
+}
+
+
+/* ===== GRID ===== */
+
+.gallery-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 2rem;
+}
+
+
+/* ===== IMAGES ===== */
+
+.gallery-grid img {
+    width: 100%;
+
+    display: block;
+
+    border-radius: 24px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s ease,
+        opacity 0.25s ease;
+}
+
+
+/* ===== HOVER ===== */
+
+.gallery-grid img:hover {
+    transform: scale(1.02);
+
+    opacity: 0.9;
+}
+
+
+/* ===== RESPONSIVE ===== */
+
+@media (max-width: 768px) {
+
+    header h1 {
+        font-size: 2.8rem;
+    }
+
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+/* ===== LIGHTBOX ===== */
+
+.lightbox {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,0.85);
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 1000;
+
+    padding: 2rem;
+}
+
+
+/* ===== HIDDEN ===== */
+
+.hidden {
+    display: none;
+}
+
+
+/* ===== LIGHTBOX IMAGE ===== */
+
+.lightbox-image {
+    max-width: 85%;
+    max-height: 75vh;
+
+    border-radius: 20px;
+}
+
+
+/* ===== CAPTION ===== */
+
+.lightbox-caption {
+    color: #f9e7d9;
+
+    margin-top: 1.5rem;
+
+    text-align: center;
+
+    max-width: 700px;
+}
+
+
+/* ===== BUTTONS ===== */
+
+.close-btn,
+.prev-btn,
+.next-btn {
+    position: absolute;
+
+    background: none;
+
+    border: none;
+
+    color: #f9e7d9;
+
+    cursor: pointer;
+}
+
+
+/* ===== CLOSE ===== */
+
+.close-btn {
+    top: 2rem;
+    right: 2rem;
+
+    font-size: 3rem;
+}
+
+
+/* ===== ARROWS ===== */
+
+.prev-btn,
+.next-btn {
+    top: 50%;
+
+    transform: translateY(-50%);
+
+    font-size: 4rem;
+}
+
+.prev-btn {
+    left: 2rem;
+}
+
+.next-btn {
+    right: 2rem;
+}
+
+.lightbox-image {
+    max-width: 85%;
+    max-height: 75vh;
+
+    border-radius: 20px;
+
+    transition:
+        transform 0.2s ease;
+}
+
+
+/* animation class */
+
+.lightbox-image.animate {
+    transform: scale(1.03);
+}
