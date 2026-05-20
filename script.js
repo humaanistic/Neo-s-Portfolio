@@ -53,8 +53,18 @@ function showImage() {
     lightboxImage.alt =
         currentImage.alt;
 
+    if (currentImage.dataset.caption) {
+
     caption.textContent =
         currentImage.dataset.caption;
+
+    caption.style.display = "block";
+
+} else {
+
+    caption.style.display = "none";
+
+}
 
 }
 function showImage() {
