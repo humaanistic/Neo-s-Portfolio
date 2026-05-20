@@ -49,6 +49,8 @@ Example:
 
 data-caption:
 This is the comment underneath the photo when you click on the photo.
+This is optional. If you don't add it, it will just display the picture without a caption.
+If you don't want a caption, make sure to remove "data-caption="..."" entirely, not just leave it blank
 
 This can include:
 * Camera information
